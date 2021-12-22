@@ -1,0 +1,209 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+
+}
+
+h1 {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.header {
+    background: gold;
+    padding: 15px 0;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+}
+
+.footer {
+    background: #83E783;
+    padding: 15px;
+    text-align: center;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+p {
+    text-align: center;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header-wrap {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-item+.nav-item {
+    padding-left: 15px;
+
+}
+
+.nav {
+    margin-left: 15px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.title {
+    text-align: center;
+}
+
+.content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.sidebar {
+    max-width: 210px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar-left {
+    order: -1;
+    background: violet;
+}
+
+.sidebar-right {
+    background: #9CB1C7;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    width: 33.333%;
+    padding: 0 15px 30px;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 15px 20px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border: 5px solid blueviolet;
+    padding: 10px;
+    background: violet;
+    margin: 0 auto;
+    background-image: url(img/im.jpg);
+    align-items: center;
+}
+
+.bt {
+    width: 40px;
+    height: 20px;
+    background: blueviolet;
+    border-radius: 15px;
+    color: white;
+
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.holder {
+    width: 400px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    border-style: solid;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    overflow: hidden;
+}
+
+.item {
+    padding: 0 15px 30px;
+}
+
+.item:first-child {
+    background: coral;
+    order: -1;
+    flex-grow: 2;
+    width: 50%;
+}
+
+.item:nth-child(2) {
+    background: gray;
+    width: 33.333%;
+    order: 1;
+}
+
+.item:nth-child(3) {
+    background: blueviolet;
+    width: 33.333%;
+    order: 0;
+}
+
+.item:nth-child(4) {
+    background: blue;
+    width: 33.333%;
+    order: 1;
+}
+
+.item:last-child {
+    background: orange;
+    order: -1;
+    flex-grow: 2;
+    width: 50%;
+}
