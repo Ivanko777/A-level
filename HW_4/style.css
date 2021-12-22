@@ -1,0 +1,282 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+
+}
+
+.hm1 {
+    width: 600px;
+    height: 600px;
+    background: #0d5825;
+    text-align: center;
+}
+
+blockquote {
+    font-size: 25px;
+}
+
+cite {
+    color: white;
+    font-size: 25px;
+}
+
+.card1, .card2, .card3 {
+    position: absolute;
+    width: 150px;
+}
+
+.card1 {
+    z-index: 2;
+    transform: rotate(-30deg);
+    top: 310px;
+    left: 150px;
+
+}
+
+.card2 {
+    z-index: 3;
+    transform: rotate(-15deg);
+    top: 310px;
+    left: 200px;
+}
+
+.card3 {
+    z-index: 4;
+    transform: rotate(2deg);
+    top: 320px;
+    left: 260px;
+
+}
+
+@keyframes cardbox1 {
+    0% {
+        z-index: 2;
+        transform: rotate(-30deg);
+        top: 240px;
+        left: 150px;
+    }
+
+    100% {
+        z-index: 2;
+        transform: rotate(-30deg);
+        top: 200px;
+        left: 150px;
+    }
+}
+
+@keyframes cardbox2 {
+    0% {
+        z-index: 3;
+        transform: rotate(-15deg);
+        top: 240px;
+        left: 200px;
+    }
+
+    100% {
+        z-index: 3;
+        transform: rotate(-15deg);
+        top: 200px;
+        left: 200px;
+    }
+}
+
+@keyframes cardbox3 {
+    0% {
+        z-index: 4;
+        -webkit-transform: rotate(20deg);
+        transform: rotate(2deg);
+        top: 250px;
+        left: 260px;
+    }
+
+    100% {
+        z-index: 4;
+        -webkit-transform: rotate(20deg);
+        transform: rotate(2deg);
+        top: 200px;
+        left: 260px;
+    }
+}
+
+.card1:hover {
+    animation: cardbox1 .5s;
+}
+
+.card2:hover {
+    animation: cardbox2 .5s;
+}
+
+.card3:hover {
+    animation: cardbox3 .5s;
+}
+
+.hm2 {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.coral, .purpule, .green {
+    position: absolute;
+}
+
+.coral {
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    background: coral;
+    top: 20px;
+    left: 35px;
+}
+
+.purpule {
+    top: 90px;
+    right: 90px;
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+    background: purple;
+}
+
+.green {
+    background: limegreen;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    top: 165px;
+    right: 20px;
+}
+
+.hm3 {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+ol {
+
+    margin: 0px;
+    padding: 40px 0px 30px 10px;
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    list-style-type: none;
+    padding: 40px 0 10px 20px;
+    color: white;
+}
+
+li {
+    position: relative;
+}
+
+li::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: orange;
+    border: black 1px solid;
+    margin-right: 10px;
+    transform: translate(0, -50%) scaleY(1.5) rotate(45deg);
+}
+
+li:hover {
+    color: orange;
+}
+
+.vertical_text {
+
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 20px;
+    right: 20px;
+    position: absolute;
+    top: 200px;
+    left: 175px;
+    color: white;
+}
+
+.hidemenu {
+    width: 200px;
+    background: grey;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -170px;
+}
+
+.hidemenu:hover {
+    left: 0px;
+
+}
+
+
+.hidemenu:hover .vertical_text {
+    display: none;
+}
+
+@keyframes slide-box {
+    0% {
+
+        top: 0;
+        left: 0;
+        background: red;
+    }
+
+    25% {
+
+        top: calc(100% - 100px);
+        left: 0;
+        background: blue;
+    }
+
+    50% {
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+        background: green;
+    }
+
+    75% {
+        top: 0;
+        left: calc(100% - 100px);
+        background: yellow;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+        background: red;
+    }
+
+}
+
+.box-wrapper {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.holden {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    animation: slide-box 5s infinite;
+}
